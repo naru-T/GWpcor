@@ -2,7 +2,7 @@ Package: GWpcor
 Type: Package
 Title: Geographically Weighted Partial Correlation Coefficient
 Version: 0.1.8
-Authors@R:
+Authors@R: 
     c(person(given = "Narumasa",
              family = "Tsutsumida",
              role = c("aut", "cre"),
@@ -22,5 +22,12 @@ Language: en-US
 URL: https://github.com/gwpcor/GWpcor
 BugReports: https://github.com/gwpcor/GWpcor/issues
 Depends: R (>= 3.5.0)
-Imports: methods, dplyr, sp, sf, geodist, pracma, corpcor, foreach, parallel, doParallel
+Imports: methods, dplyr, sp, sf, geodist, pracma, corpcor, foreach,
+        parallel, doParallel
 SystemRequirements: GDAL (>= 2.0.1), GEOS (>= 3.4.0), PROJ (>= 4.8.0)
+NeedsCompilation: no
+Packaged: 2026-01-13 07:20:07 UTC; nt
+Author: Narumasa Tsutsumida [aut, cre]
+    (<https://orcid.org/0000-0002-6333-0301>),
+  Joseph Percival [aut] (<https://orcid.org/0000-0001-5941-4601>)
+Maintainer: Narumasa Tsutsumida <rsnaru.jp@gmail.com>
