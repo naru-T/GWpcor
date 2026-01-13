@@ -8,20 +8,20 @@ Geographically Weighted Correlation and Partial Correlation
 This function calculates the geographically weighted correlation and partial correlation between two variables given others. The function is designed by the gwss function from the GWmodel package, and the cor2pcor function from the corpcor package.
 }
 \usage{
-gwpcor(sdata, res_dp, vars, method = c("pearson", "spearman"), 
-kernel = "bisquare", adaptive = FALSE, bw, dMat, 
+gwpcor(sdata, res_dp, vars, method = c("pearson", "spearman"),
+kernel = "bisquare", adaptive = FALSE, bw, dMat,
 geodisic_measure = "cheap", foreach = FALSE)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{sdata}{
 a Spatial*DataFrame (i.e. SpatialPointsDataFrame or SpatialPolygonsDataFrame as defined in package sp),
-or a sf object. 
+or a sf object.
 
 }
 
   \item{res_dp}{
-A Spatial*DataFrame object for providing summary locations, i.e. SpatialPointsDataFrame or SpatialPolygonsDataFrame as defined in package sp, or a sf object. 
+A Spatial*DataFrame object for providing summary locations, i.e. SpatialPointsDataFrame or SpatialPolygonsDataFrame as defined in package sp, or a sf object.
 
 }
 
@@ -95,19 +95,19 @@ Tsutsumida N. and Percival J.
 }
 
 \examples{
-#NOTE: This example only shows how to implement gwpcor using sample data (meuse) in sp package. 
+#NOTE: This example only shows how to implement gwpcor using sample data (meuse) in sp package.
 #Results do not suggest any meanings.
 
 #import data from sp package
 library(sp)
 library(sf)
-data(meuse, package = "sp") 
+data(meuse, package = "sp")
 meuse_sf <- st_as_sf(meuse, coords = c("x", "y"), crs = 28992)
 
 #implement gwpcor as an example
 #the bandwidth is arbitrary.
 res <- gwpcor(sdata = meuse_sf, vars = c("cadmium","copper", "zinc"),
-method = "pearson", kernel = "bisquare",adaptive = TRUE, 
+method = "pearson", kernel = "bisquare",adaptive = TRUE,
 bw = 0.25, geodisic_measure = "cheap", foreach = FALSE)
 
 }

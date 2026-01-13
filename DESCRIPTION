@@ -13,8 +13,8 @@ Authors@R:
              role = c("aut"),
              email = "ipercival@gmail.com",
              comment = c(ORCID = "0000-0001-5941-4601")))
-Description: Implements a geographically weighted partial correlation which is 
-    an extension from gwss() function in the 'GWmodel' package 
+Description: Implements a geographically weighted partial correlation which is
+    an extension from gwss() function in the 'GWmodel' package
     (Percival and Tsutsumida (2017) <doi:10.1553/giscience2017_01_s36>).
 License: GPL-3
 Encoding: UTF-8
